@@ -96,25 +96,29 @@ section {
 
 .btn {
   padding: 0.5em 1em;
+  display: block;
   border-radius: 10px;
+  margin-block: 0.5em;
 }
 
 .btn-hide {
   color: var(--scheme-dark-text);
   background-color: var(--color-pink-1);
-  font-size: 1.4em;
-  margin-block-start: 1em;
+  font-size: 1.2em;
+  display: block;
+  width: max-content;
 }
 
 .btn-download {
   background-color: var(--color-pink-1);
   font-size: 1.2em;
+  width: max-content;
 }
 
 #header {
   width: 100%;
   height: max-content;
-  background-image: url("https://th.bing.com/th/id/R.1e421b84ef27a47cbfd13d9537d7d37b?rik=5HacnClWK%2bURSg&pid=ImgRaw&r=0");
+  background-image: url("/style/image/hinh3.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position-x: 70%;
