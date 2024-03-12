@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+#services {
+  width: 100%;
+  height: max-content;
+  .services__list {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2em;
+
+    .list__items {
+      background-color: #333333;
+      border: 1px solid rgb(220, 220, 220, 0.5);
+      padding: 1em;
+      border-radius: 7px;
+      display: flex;
+      flex-direction: column;
+      & * {
+        margin-bottom: 0.5em;
+        color: var(--scheme-dark-text);
+      }
+
+      .items-title {
+        @include mixin-flex-center;
+        height: 100px;
+        gap: 0.5em;
+        font-size: 2em;
+        font-weight: 500;
+
+        & :is(.fa-brands, .fa-solid) {
+          color: var(--color-pink-1);
+        }
+      }
+
+      .items-text {
+        font-size: 1.1em;
+        line-height: 1.5em;
+        text-align: start;
+        padding: 1em;
+        flex-basis: 100%;
+      }
+      .btn-more {
+        width: 50%;
+        text-align: center;
+        color: var(--color-pink-1);
+        font-size: 1.2em;
+      }
+    }
+  }
+}

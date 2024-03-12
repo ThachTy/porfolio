@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- ------------- HEADER ------------- -->
+    <header id="header">
+      <div class="container">
+        <nav class="header__navbar">
+          <button onclick="handleToogle(this)" class="btn-close" role="button">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <ul class="navs">
+            <li class="nav-items">
+              <a href="#header" class="nav-link">Home</a>
+            </li>
+            <li class="nav-items">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-items">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-items">
+              <a href="#works" class="nav-link">Porfolio</a>
+            </li>
+            <li class="nav-items">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__content">
+          <div class="content__left">
+            <p class="position">Fontend Development</p>
+            <h1 class="hi">Hi! I'm <span class="name">Kevin Nguyen</span></h1>
+            <p class="location">From VietNam</p>
+            <button class="btn btn-hide">Hide me!</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- -------------ABOUT ------------- -->
+    <section id="about">
+      <div class="container">
+        <h3 class="title">About Me</h3>
+        <div class="about__content">
+          <div class="content__left">
+            <img
+              class="about-avatar"
+              src="https://th.bing.com/th/id/R.a68e10df43d52e6c0ff43d69ef578b4f?rik=wH9D8q9aIXarGg&riu=http%3a%2f%2ftemplate-kit.axiomthemes.com%2fbusiness-portfolio%2fwp-content%2fuploads%2fsites%2f16%2felementor%2fthumbs%2fportrait-of-a-young-man-in-a-studio-PDZUMGT-opp9v9u32vf50jb51bul3lvusqspkj1f5nd6q41lw0.jpg&ehk=qF0QBEhgh4WiKJz8bVHJ7lSD8g8MhFo%2f1JsbqoOfbnU%3d&risl=&pid=ImgRaw&r=0"
+              alt="avatar-2"
+            />
+          </div>
+          <div class="content__right">
+            <p class="content-text">
+              I am a passionate Front-End Developer, always eager to learn and
+              improve my skills. I believe that working in a real-world
+              environment and collaborating with experienced professionals will
+              provide me with the opportunity to contribute positively to the
+              company's projects and learn from my peers. I am excited to join
+              the team and bring value during my time there
+            </p>
+
+            <div class="tab">
+              <div class="tab-title">
+                <a
+                  onclick="handleChangeTab('Skills')"
+                  class="tab-link active-link"
+                  role="button"
+                  >Skills</a
+                >
+                <a
+                  onclick="handleChangeTab('Experienes')"
+                  class="tab-link"
+                  role="button"
+                  >Experienes</a
+                >
+                <!-- <a
+                  onclick="handleChangeTab('Education')"
+                  class="tab-link"
+                  role="button"
+                  >Education</a
+                > -->
+              </div>
+              <div class="tab-content">
+                <div class="tab-item active-link" id="Skills">
+                  <ul>
+                    <li class="tab-row">
+                      <h3 class="heading">HTML, CSS, Javascript, SCSS</h3>
+                      <!-- <p class="tab-text">HTML5,</p> -->
+                    </li>
+                    <li class="tab-row">
+                      <h3 class="heading">React</h3>
+                      <!-- <p class="tab-text">Hook,</p> -->
+                    </li>
+                    <li class="tab-row">
+                      <h3 class="heading">Response</h3>
+                      <p class="tab-text">
+                        Bootstrap, Tailwind, Antd, Material,...
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-item" id="Experienes">
+                  <ul>
+                    <li class="tab-row">
+                      <h3 class="heading">2016</h3>
+                      <p class="tab-text">Lorem ipsum dolor sit amet.</p>
+                    </li>
+                    <li class="tab-row">
+                      <h3 class="heading">2016</h3>
+                      <p class="tab-text">Lorem ipsum dolor sit amet.</p>
+                    </li>
+                    <li class="tab-row">
+                      <h3 class="heading">2024</h3>
+                      <p class="tab-text">Lorem ipsum dolor sit amet.</p>
+                    </li>
+                  </ul>
+                </div>
+                <!-- <div class="tab-item" id="Education">
+                  <ul>
+                    <li class="tab-row">
+                      <h3 class="heading">2016</h3>
+                      <p class="tab-text">Lorem ipsum dolor sit amet.</p>
+                    </li>
+                    <li class="tab-row">
+                      <h3 class="heading">2020</h3>
+                      <p class="tab-text">Lorem ipsum dolor sit amet.</p>
+                    </li>
+                    <li class="tab-row">
+                      <h3 class="heading">2024</h3>
+                      <p class="tab-text">Lorem ipsum dolor sit amet.</p>
+                    </li>
+                  </ul>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------- SERVICES ------------- -->
+    <section id="services">
+      <div class="container">
+        <div class="title">My Services</div>
+        <div class="services__list">
+          <div class="list__items">
+            <div class="items-title">
+              <i class="fa-solid fa-code"></i><span>Web Design</span>
+            </div>
+            <p class="items-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel
+              minima, magnam dicta nemo voluptates ut harum adipisci labore
+              incidunt eveniet sapiente expedita, vero vitae ipsam, dolore autem
+              nostrum quisquam.
+            </p>
+            <a class="btn btn-more" target="_blank" role="button">Learn more</a>
+          </div>
+          <div class="list__items">
+            <div class="items-title">
+              <i class="fa-solid fa-crop-simple"></i>
+              <span>UI/UL Design</span>
+            </div>
+            <p class="items-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel
+              minima, magnam dicta nemo voluptates ut harum adipisci labore
+              incidunt eveniet sapiente expedita, vero vitae ipsam, dolore autem
+              nostrum quisquam.
+            </p>
+            <a class="btn btn-more" target="_blank" role="button">Learn more</a>
+          </div>
+          <div class="list__items">
+            <div class="items-title">
+              <i class="fa-brands fa-app-store"></i>
+              <span>App Design</span>
+            </div>
+            <p class="items-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos vel
+              minima, magnam dicta nemo voluptates ut harum adipisci labore
+              incidunt eveniet sapiente expedita, vero vitae ipsam, dolore autem
+              nostrum quisquam.
+            </p>
+            <a class="btn btn-more" target="_blank" role="button">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------- WORKS ------------- -->
+    <section id="works">
+      <div class="container">
+        <h2 class="title">My Works</h2>
+        <div class="work__slider swiper-container">
+          <div class="swiper-wrapper">
+            <!-- Diner -->
+            <div class="work__item swiper-slide">
+              <img
+                class="work-image"
+                src="/style/image/diner.png"
+                alt="diner"
+              />
+              <div class="overlay">
+                <div class="content">
+                  <a
+                    href="https://dinar-eight.vercel.app/"
+                    class="link"
+                    target="_blank"
+                  >
+                    <h3 class="slider-title">Diner</h3>
+                    <p class="slider-description">
+                      Build a user interface using HTML, CSS, and Javascript to
+                      display a static website about restaurants, and dishes.
+                      The program uses HTML + CSS combined with frameworks:
+                      countUp, and Owl Js. Ensuring stability and compatibility
+                      across multiple browsers and devices.
+                    </p>
+
+                    <div class="work-icons">
+                      <i class="fa-brands fa-html5"></i>
+                      <!-- <i class="fa-brands fa-css3-alt"></i> -->
+                      <i class="fa-brands fa-js"></i>
+                      <i class="fa-brands fa-sass"></i>
+                      <i class="fa-brands fa-bootstrap"></i>
+                    </div>
+                    <!-- Link to project -->
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- Movies -->
+            <div class="work__item swiper-slide">
+              <img
+                class="work-image"
+                src="/style/image/movies.png"
+                alt="movies"
+              />
+              <div class="overlay">
+                <div class="content">
+                  <a
+                    href="https://bc-movies.vercel.app/"
+                    class="link"
+                    target="_blank"
+                  >
+                    <h3 class="slider-title">Movies</h3>
+                    <p class="slider-description">
+                      Build a homepage and information page about movie theaters
+                      using React. Use Tailwind to design reasonable UI. Call
+                      API to display movie list, Antd Design to display movies
+                      by theater and theater cluster.
+                    </p>
+
+                    <div class="work-icons">
+                      <i class="fa-brands fa-html5"></i>
+                      <i class="fa-brands fa-react"></i>
+                      <img
+                        width="32px"
+                        height="32px"
+                        src="./style/image/tailwind-logo.jpg"
+                        alt="tailwind-logo"
+                      />
+                      <img
+                        width="32px"
+                        height="32px"
+                        src="./style/image/antd.png"
+                        alt="tailwind-logo"
+                      />
+                      <!-- <i class="fa-brands fa-css3-alt"></i> -->
+                      <i class="fa-brands fa-js"></i>
+                      <!-- <i class="fa-brands fa-sass"></i> -->
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <!-- AirBnb -->
+            <div class="work__item swiper-slide">
+              <img
+                class="work-image"
+                src="/style/image/airbnb.png"
+                alt="airbnb"
+              />
+              <div class="overlay">
+                <div class="content">
+                  <a
+                    href="https://airbnb-liard-kappa.vercel.app/"
+                    class="link"
+                    target="_blank"
+                  >
+                    <h3 class="slider-title">AirBNB</h3>
+                    <p class="slider-description">
+                      Join the team to build the homepage, room booking
+                      information page, admin. Implement room booking functions
+                      such as registration, login, admin to manage rooms, users,
+                      room bookings.
+                    </p>
+
+                    <div class="work-icons">
+                      <i class="fa-brands fa-html5"></i>
+                      <i class="fa-brands fa-sass"></i>
+                      <i class="fa-brands fa-react"></i>
+                      <img
+                        width="32px"
+                        height="32px"
+                        src="./style/image/tailwind-logo.jpg"
+                        alt="tailwind-logo"
+                      />
+                      <img
+                        width="32px"
+                        height="32px"
+                        src="./style/image/antd.png"
+                        alt="tailwind-logo"
+                      />
+                      <!-- <i class="fa-brands fa-css3-al`t"></i> -->
+                      <!-- <i class="fa-brands fa-js"></i> -->
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--------------- CONTACT------------ -->
+    <section id="contact">
+      <div class="container">
+        <div class="contact__layout">
+          <div class="contact__left">
+            <h4 class="title">Contact Me</h4>
+            <ul class="nav">
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="mailto:nguyenngocthach1506@gmail.com"
+                  title="nguyenngocthach1506@gmail.com@gmail.com"
+                >
+                  <i class="fa-solid fa-envelope-circle-check"></i>
+                  <span>nguyenngocthach1506@gmail.com</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="tel:+84763965649" title="0763965649">
+                  <i class="fa-solid fa-square-phone"></i>
+                  <span>+84763965649</span>
+                </a>
+              </li>
+              <li class="nav-item social">
+                <a
+                  class="nav-link"
+                  href="https://github.com/ThachTy"
+                  title="My git"
+                >
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a
+                  class="nav-link"
+                  href="https://www.facebook.com/profile.php?id=100092485926538"
+                  title="My facebook"
+                >
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a
+                  class="nav-link"
+                  href="https://www.linkedin.com/in/th%E1%BA%A1ch-nguy%E1%BB%85n-934a082b5/"
+                  title="My linkedin"
+                >
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a
+                  class="nav-link"
+                  href="https://twitter.com/NgocThach1506"
+                  title="My twitter"
+                >
+                  <i class="fa-brands fa-square-twitter"></i>
+                </a>
+              </li>
+            </ul>
+            <!--  Dowload CV -->
+            <a
+              class="btn btn-download"
+              href="https://www.linkedin.com/"
+              role="button"
+            >
+              Download CV</a
+            >
+          </div>
+          <div class="contact__right">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.6279097986526!2d106.70090027465508!3d10.763133189384845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f6b79198047%3A0xe869b8fabf380640!2zxJAuIEhvw6BuZyBEaeG7h3UsIFF14bqtbiA0LCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmgsIFZpZXRuYW0!5e0!3m2!1sen!2s!4v1708346193271!5m2!1sen!2s"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./index.js"></script>
+    <script type="text/javascript">
+      $(".swiper-wrapper").slick({
+        slidesToScroll: 1,
+        slidesToShow: 3,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        resizeTo: "window",
+        pauseOnHover: true,
+        infinite: true,
+        dots: true,
+        dotsclass: "swiper-wrapper",
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+            },
+          },
+        ],
+      });
+    </script>
+  </body>
+</html>

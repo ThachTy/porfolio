@@ -1,0 +1,11 @@
+@mixin image {
+  width: 100%;
+  min-height: 100%;
+  object-fit: fill;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

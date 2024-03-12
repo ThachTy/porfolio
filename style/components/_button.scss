@@ -1,0 +1,16 @@
+.btn {
+  padding: 0.5em 1em;
+  border-radius: 10px;
+}
+
+.btn-hide {
+  color: var(--scheme-dark-text);
+  background-color: var(--color-pink-1);
+  font-size: 1.4em;
+  margin-block-start: 1em;
+}
+
+.btn-download {
+  background-color: var(--color-pink-1);
+  font-size: 1.2em;
+}

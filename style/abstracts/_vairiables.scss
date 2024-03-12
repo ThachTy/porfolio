@@ -1,0 +1,15 @@
+$color-pink-1: #ff004f;
+
+$fs-text: clamp(10px, 5vw, 1em);
+$height-header: 70px;
+
+$scheme: (
+  light: (
+    background: #fefefe,
+    text: #080808,
+  ),
+  dark: (
+    background: #080808,
+    text: #fff,
+  ),
+);

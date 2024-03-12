@@ -1,0 +1,22 @@
+@use "../abstracts/vairiables" as *;
+
+:root {
+  --scheme-text: #000;
+  --scheme-background: #fff;
+  --color-pink-1: #ff004f;
+
+  @each $mode, $values in $scheme {
+    @each $property, $value in $values {
+      --scheme-#{$mode}-#{$property}: #{$value};
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    --scheme-background: var(--scheme-light-background);
+    --scheme-text: var(--scheme-light-text);
+  }
+  @media (prefers-color-scheme: dark) {
+    --scheme-background: var(--scheme-dark-background);
+    --scheme-text: var(--scheme-dark-text);
+  }
+}

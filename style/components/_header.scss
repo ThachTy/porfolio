@@ -1,0 +1,108 @@
+@use "../abstracts/vairiables" as *;
+#header {
+  width: 100%;
+  height: max-content;
+  background-image: url("https://th.bing.com/th/id/R.1e421b84ef27a47cbfd13d9537d7d37b?rik=5HacnClWK%2bURSg&pid=ImgRaw&r=0");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: 70%;
+  .header__navbar {
+    background-color: #404040;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9;
+    transition: right 0.35s ease-in-out;
+
+    .btn-close {
+      display: none;
+      position: absolute;
+      left: -35px;
+      top: 5px;
+      font-size: 1.7em;
+      color: var(--color-pink-1);
+
+      .fa-solid {
+        transition: all 0.5 linear;
+      }
+    }
+
+    .navs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(10px, 2vw, 1.5rem);
+      height: $height-header;
+
+      .nav-items {
+        .nav-link {
+          display: block;
+          text-align: center;
+          padding: 1em 2em;
+          color: var(--scheme-dark-text);
+          &:hover {
+            color: var(--color-pink-1);
+          }
+        }
+      }
+    }
+  }
+  @media screen and (width < 900px) {
+    $w-max: 200px;
+    height: 100dvh;
+    .header__navbar {
+      width: $w-max;
+      height: 100dvh;
+      background: rgba(47, 47, 47, 0.6);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      &.toggle {
+        right: -$w-max;
+      }
+
+      .btn-close {
+        display: block;
+      }
+      .navs {
+        height: inherit;
+        justify-content: flex-start;
+        flex-direction: column;
+      }
+    }
+  }
+  .header__content {
+    margin-top: $height-header;
+    height: calc(100vh - $height-header);
+    display: grid;
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    place-items: center;
+
+    @media screen and (width < 900px) {
+      place-content: center;
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    .content__left {
+      width: 100%;
+      .position {
+        font-size: clamp(1em, 3vw, 2.5em);
+      }
+      .hi {
+        font-size: clamp(1.5em, 5vw, 4em);
+        text-wrap: nowrap;
+      }
+      .name {
+        color: var(--color-pink-1);
+      }
+
+      .location {
+        font-size: clamp(1em, 3.5vw, 1.5em);
+      }
+    }
+  }
+}

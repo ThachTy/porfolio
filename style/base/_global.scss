@@ -1,0 +1,33 @@
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI";
+  background-color: var(--scheme-background);
+  color: var(--scheme-text);
+  color-scheme: dark light;
+  letter-spacing: 0.1em;
+}
+body,
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+a,
+button {
+  cursor: pointer;
+}
+.container {
+  width: inherit;
+  padding-inline: clamp(1em, 5vw, 50px);
+}
+
+.title {
+  font-size: clamp(2rem, 3vmin, 48px);
+  color: var(--color-pink-1);
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+section {
+  scroll-margin-top: 0px;
+  padding-block-start: 2em;
+}

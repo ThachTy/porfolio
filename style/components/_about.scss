@@ -1,0 +1,90 @@
+@use "../abstracts" as *;
+@use "../abstracts/vairiables" as *;
+
+#about {
+  width: 100%;
+  height: max-content;
+  .about__content {
+    height: max-content;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 2rem;
+    .content__left {
+      .about-avatar {
+        border-radius: 5px;
+        @include mixin-image;
+      }
+    }
+    .content__right {
+      .content-text {
+        font-size: 1.3em;
+        color: var(--scheme-text);
+      }
+
+      .tab {
+        width: 100%;
+        margin-top: 3em;
+        .tab-title {
+          display: flex;
+          gap: 1em;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          justify-content: start;
+          .tab-link {
+            font-size: clamp(10px, 5vw, 1.1em);
+            $padding-tab-link: 0.5em;
+            text-align: start;
+            display: block;
+            padding: $padding-tab-link;
+
+            transition: color 0.25s linear;
+            flex-basis: 100%;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 0;
+              height: 2px;
+              position: absolute;
+              bottom: 0;
+              left: $padding-tab-link;
+              background-color: var(--color-pink-1);
+              transition: all 0.25s ease-in;
+            }
+
+            &.active-link {
+              color: var(--color-pink-1);
+              &::before {
+                width: calc(100% - $padding-tab-link * 2);
+                background-color: var(--color-pink-1);
+              }
+            }
+          }
+        }
+        .tab-content {
+          padding-block: 1.5em;
+          line-height: 2em;
+
+          .heading {
+            color: var(--color-pink-1);
+          }
+          .tab-text {
+            font-size: 0.9em;
+          }
+          .tab-item {
+            display: none;
+
+            .tab-row {
+              margin-bottom: 0.7em;
+            }
+
+            &.active-link {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
